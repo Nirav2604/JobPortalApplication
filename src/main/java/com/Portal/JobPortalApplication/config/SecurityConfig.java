@@ -2,6 +2,7 @@ package com.Portal.JobPortalApplication.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,13 +15,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
-                .csrf(csrf -> csrf.disable()) // important for testing POST requests
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/Auth/**").permitAll()
                         .anyRequest().authenticated()
                 )
-                .formLogin(form -> form.permitAll()) // enables default login page
-                .logout(logout -> logout.permitAll());
-
+                .httpBasic(Customizer.withDefaults());
         return http.build();
     }
     @Bean
