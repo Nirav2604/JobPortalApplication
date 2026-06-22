@@ -1,6 +1,6 @@
 package com.Portal.JobPortalApplication.dto;
 
-import com.Portal.JobPortalApplication.Entity.Role;
+import com.Portal.JobPortalApplication.entity.Role;
 import lombok.Data;
 
 @Data

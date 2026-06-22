@@ -1,4 +1,4 @@
-package com.Portal.JobPortalApplication.Entity;
+package com.Portal.JobPortalApplication.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,6 +1,6 @@
-package com.Portal.JobPortalApplication.Repository;
+package com.Portal.JobPortalApplication.repository;
 
-import com.Portal.JobPortalApplication.Entity.User;
+import com.Portal.JobPortalApplication.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

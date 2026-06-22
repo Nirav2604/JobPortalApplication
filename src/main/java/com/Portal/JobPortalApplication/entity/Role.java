@@ -1,4 +1,4 @@
-package com.Portal.JobPortalApplication.Entity;
+package com.Portal.JobPortalApplication.entity;
 
 public enum Role {
     ADMIN,
