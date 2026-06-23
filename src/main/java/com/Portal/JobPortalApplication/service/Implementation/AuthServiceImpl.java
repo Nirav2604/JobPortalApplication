@@ -32,7 +32,7 @@ public class AuthServiceImpl implements AuthService {
                 .build();
 
         userRepository.save(user);
-        return "User Registered Successfull y!!!!!";
+        return "User Registered Successfully!!!!!";
     }
 
     @Override
