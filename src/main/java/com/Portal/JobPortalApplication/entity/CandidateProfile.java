@@ -26,6 +26,6 @@ public class CandidateProfile {
     private String resumeUrl;
 
     @OneToOne
-    @JoinColumn(name ="id",unique = true)
+    @JoinColumn(name ="User_id",unique = true)
     private User user;
 }
