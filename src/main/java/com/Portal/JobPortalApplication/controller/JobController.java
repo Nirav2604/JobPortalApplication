@@ -21,12 +21,12 @@ public class JobController {
         return jobService.createJob(authentication.getName(), jobRequest);
     }
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public Job UpdateJob(@PathVariable Long id,Authentication authentication,@RequestBody JobRequest jobRequest){
         return jobService.updateJob(id, authentication.getName(), jobRequest);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public Job deleteJob(@PathVariable Long id,Authentication authentication){
         return jobService.deleteJob(id, authentication.getName());
     }
