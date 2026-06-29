@@ -43,7 +43,7 @@ public class JobController {
 
     @GetMapping("/search")
     public List<Job> searchJobs(@RequestParam String keyword){
-        return jobService.searchJobs(keyword);
+        return jobService.findByTitleContainingIgnoreCase(keyword);
     }
 
     @GetMapping("/recruiter")
