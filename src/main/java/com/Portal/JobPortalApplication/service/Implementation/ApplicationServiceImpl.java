@@ -31,7 +31,7 @@ public class ApplicationServiceImpl implements ApplicationService {
         }
 
         Application application=Application.builder()
-                .Candidate(candidate)
+                .candidate(candidate)
                 .job(job)
                 .appliedDate(LocalDate.now())
                 .status(ApplicationStatus.APPLIED)
@@ -71,7 +71,7 @@ public class ApplicationServiceImpl implements ApplicationService {
         Company company=companyRepository.findByRecruiter(recruiter).orElseThrow();
 
         if(!application.getJob().getCompany().getId().equals(company.getId())){
-            throw new RuntimeException("UnAuthorized!!!!");
+            throw new RuntimeException("Unauthorized!!!!");
         }
         application.setStatus(ApplicationStatus.valueOf(status));
         return applicationRepository.save(application);

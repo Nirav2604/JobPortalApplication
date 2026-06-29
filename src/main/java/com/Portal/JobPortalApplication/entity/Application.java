@@ -23,7 +23,7 @@ public class Application {
 
     @ManyToOne
     @JoinColumn(name = "candidate_id")
-    private User Candidate;
+    private User candidate;
 
     @ManyToOne
     @JoinColumn(name = "job_id")
