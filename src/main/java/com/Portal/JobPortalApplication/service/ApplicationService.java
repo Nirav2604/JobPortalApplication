@@ -4,7 +4,7 @@ import com.Portal.JobPortalApplication.entity.Application;
 
 import java.util.List;
 
-public interface ApplicationStatusRequest {
+public interface ApplicationService {
     Application applyJobs(Long jobId,String email);
     List<Application> getMyApplications(String email);
     List<Application> getApplicants(Long jobId, String recruiterEmail);
