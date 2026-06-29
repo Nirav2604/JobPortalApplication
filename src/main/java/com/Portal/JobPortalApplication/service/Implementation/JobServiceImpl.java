@@ -54,7 +54,7 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    public Job deletJob(Long jobId, String email) {
+    public Job deleteJob(Long jobId, String email) {
         jobRepository.deleteById(jobId);
         return null;
     }
