@@ -16,17 +16,19 @@ public class RecruiterController {
     private final RecruiterService recruiterService;
 
     @PostMapping("/company")
-    public Company createCompany(String email, @RequestBody CompanyRequest companyRequest){
+    public Company createCompany(Authentication authentication, @RequestBody CompanyRequest companyRequest){
+        String email=authentication.getName();
        return recruiterService.createCompany(email,companyRequest);
     }
 
     @GetMapping("/company")
-    public Company getCompany(String email){
-        return recruiterService.getCompany(email);
+    public Company getCompany(Authentication authentication){
+        return recruiterService.getCompany(authentication.getName());
     }
 
     @PutMapping("/company")
-    public Company updateCompany(String email, @RequestBody CompanyRequest companyRequest){
+    public Company updateCompany(Authentication authentication, @RequestBody CompanyRequest companyRequest){
+        String email=authentication.getName();
         return recruiterService.updateCompany(email,companyRequest);
     }
 }
