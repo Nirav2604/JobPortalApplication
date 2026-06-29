@@ -14,5 +14,5 @@ public interface JobService {
     List<Job> getRecruiterJobs(String email);
     List<Job> getAllJobs();
     Job getJobById(Long jobId);
-    List<Job> searchJobs(String keyword);
+    List<Job> findByTitleContainingIgnoreCase(String keyword);
 }
