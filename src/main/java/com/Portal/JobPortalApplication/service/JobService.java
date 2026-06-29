@@ -9,7 +9,7 @@ public interface JobService {
 
     Job createJob(String email, JobRequest jobRequest);
     Job updateJob(Long jobId,String email,JobRequest jobRequest);
-    Job deletJob(Long jobId,String email);
+    Job deleteJob(Long jobId,String email);
 
     List<Job> getRecruiterJobs(String email);
     List<Job> getAllJobs();
