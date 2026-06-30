@@ -16,6 +16,6 @@ public interface AdminService {
 
     List<Job> getAllJobs();
 
-    void deleteJobs(Long jobId);
+    void deleteJob(Long jobId);
 
 }

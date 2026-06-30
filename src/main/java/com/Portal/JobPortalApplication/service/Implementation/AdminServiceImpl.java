@@ -51,7 +51,7 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public void deleteJobs(Long jobId) {
+    public void deleteJob(Long jobId) {
         if(!jobRepository.existsById(jobId)){
             throw new ResourceNotFoundException("Job Not Found");
         }
