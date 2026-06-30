@@ -12,7 +12,7 @@ public interface AdminService {
 
     List<User> getAllUsers();
 
-    User updateUserStatus(Long userId,boolean active);
+    User updateUserStatus(Long userId,Boolean active);
 
     List<Job> getAllJobs();
 

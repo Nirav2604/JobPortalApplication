@@ -39,9 +39,10 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public User updateUserStatus(Long userId, boolean active) {
+    public User updateUserStatus(Long userId, Boolean active) {
         User user=userRepository.findById(userId).orElseThrow(()->new ResourceNotFoundException("User Not Found!!!!"));
-        user.set_active(active);
+        //user.set_active(active);
+        user.setIs_active(active);
         return userRepository.save(user);
     }
 

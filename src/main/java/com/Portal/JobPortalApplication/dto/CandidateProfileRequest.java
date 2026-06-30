@@ -8,4 +8,5 @@ public class CandidateProfileRequest {
     private String skills;
     private String experience;
     private String education;
+    private Boolean active;
 }

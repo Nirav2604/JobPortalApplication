@@ -27,7 +27,7 @@ public class AdminController {
     }
 
     @PutMapping("/users/{id}")
-    public User updateStatus(@PathVariable Long id, @RequestParam boolean active){
+    public User updateStatus(@PathVariable Long id, @RequestBody Boolean active){
         return adminService.updateUserStatus(id,active);
     }
 

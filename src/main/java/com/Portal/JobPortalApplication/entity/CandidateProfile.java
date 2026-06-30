@@ -25,6 +25,8 @@ public class CandidateProfile {
 
     private String resumeUrl;
 
+    private Boolean active;
+
     @OneToOne
     @JoinColumn(name ="User_id",unique = true)
     private User user;
