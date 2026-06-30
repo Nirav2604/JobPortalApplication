@@ -10,4 +10,5 @@ public interface JobRepository extends JpaRepository<Job,Long> {
 
     List<Job> findByCompany(Company company);
     List<Job> findByTitleContainingIgnoreCase(String keyword);
+    List<Job> findTop6ByOrderByPostedDateDesc();
 }

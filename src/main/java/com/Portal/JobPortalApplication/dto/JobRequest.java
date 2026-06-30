@@ -13,4 +13,5 @@ public class JobRequest {
     private Double salary;
     private Integer experienceRequired;
     private String jobType;
+    private String skills;
 }

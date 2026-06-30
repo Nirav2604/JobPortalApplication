@@ -31,6 +31,9 @@ public class Job {
 
     private LocalDateTime postedDate;
 
+    @Column(length = 1000)
+    private String skills;
+
     @ManyToOne
     @JoinColumn(name = "company_id")
     private Company company;

@@ -15,4 +15,5 @@ public interface JobService {
     List<Job> getAllJobs();
     Job getJobById(Long jobId);
     List<Job> findByTitleContainingIgnoreCase(String keyword);
+    List<Job> getLatestJobs();
 }

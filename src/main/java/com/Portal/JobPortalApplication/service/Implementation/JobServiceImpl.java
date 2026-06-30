@@ -33,6 +33,7 @@ public class JobServiceImpl implements JobService {
                 .location(jobRequest.getLocation())
                 .salary(jobRequest.getSalary())
                 .experienceRequired(jobRequest.getExperienceRequired())
+                .skills(jobRequest.getSkills())
                 .jobType(jobRequest.getJobType())
                 .postedDate(LocalDateTime.now())
                 .company(company)
@@ -48,6 +49,7 @@ public class JobServiceImpl implements JobService {
         job.setLocation(jobRequest.getLocation());
         job.setSalary(jobRequest.getSalary());
         job.setExperienceRequired(jobRequest.getExperienceRequired());
+        job.setSkills(jobRequest.getSkills());
         job.setJobType(jobRequest.getJobType());
 
         return jobRepository.save(job);
@@ -80,5 +82,12 @@ public class JobServiceImpl implements JobService {
     @Override
     public List<Job> findByTitleContainingIgnoreCase(String keyword) {
         return jobRepository.findByTitleContainingIgnoreCase(keyword);
+    }
+
+    @Override
+    public List<Job> getLatestJobs() {
+
+        return jobRepository.findTop6ByOrderByPostedDateDesc();
+
     }
 }
